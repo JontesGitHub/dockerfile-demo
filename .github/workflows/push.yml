@@ -1,7 +1,7 @@
 name: Build and Push to Docker Hub
 
 on:
-  workflow_dispatch:
+  workflow_dispatch
 
 jobs:
   build-and-push:
@@ -27,8 +27,9 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-        - name: Build and push
-          uses: docker/build-push-action@v2
-          with:
-            push: true
-            tags: jontesdocker/my-app:${{ github.run_number }}
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: jontesdocker/my-app:${{ github.run_number }}
