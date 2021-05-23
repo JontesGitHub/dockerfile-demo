@@ -6,8 +6,6 @@ WORKDIR /javafolder
 
 COPY ${JAR_FILE} app.jar
 
-EXPOSE 8081
+EXPOSE 8080
 
-ENV MY_KEY="hellojava20"
-
-ENTRYPOINT ["/bin/sh", "-c" , "pwd"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
