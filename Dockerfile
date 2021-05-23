@@ -6,7 +6,7 @@ WORKDIR /javafolder
 
 COPY ${JAR_FILE} app.jar
 
-EXPOSE 8081 # Contioner
+EXPOSE 8081
 
 ENV MY_KEY="hellojava20"
 
