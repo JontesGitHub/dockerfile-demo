@@ -32,4 +32,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: jontesdocker/my-app:${{ github.run_number }}
+          tags: DITT_DOCKER_HUB_NAMN/VALFRITT_NAMN_PÅ_IMAGE:${{ github.run_number }}
